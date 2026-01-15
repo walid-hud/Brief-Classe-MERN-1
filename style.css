@@ -161,3 +161,19 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 }
+
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+
+label[required]{
+  position: relative;
+}
+label[required]::after{
+  content: "*";
+  color: red;
+  position: absolute;
+  right: -10px;
+}

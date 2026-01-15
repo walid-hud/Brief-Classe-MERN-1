@@ -1,12 +1,83 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
-    <title>HealthCare</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <title>HealthCare</title>
+</head>
+
+<body>
+  <main class="min-h-dvh bg-background overflow-x-hidden">
+    <nav class="flex justify-between items-center px-2 py-4">
+      <div class="text-3xl font-bold text-primary font-serif">
+        <a href="/">HealthCare</a>
+      </div>
+      <div>
+        <div class="flex items-center px-4 py-1 rounded-md font-medium text-xl gap-x-2 border-2 border-border
+            cursor-pointer hover:bg-accent transition-all duration-200 ease-in-out
+          ">
+          <span class="">demands</span>
+          <span class="w-4 h-6">
+            <svg>
+              <use href="./public/demands-icon.svg"></use>
+            </svg>
+          </span>
+
+        </div>
+      </div>
+    </nav>
+
+    <section class="px-2 py-12">
+      <h1 class="text-4xl font-bold my-6">Pre-admission</h1>
+      <form
+        id="form"
+        class="
+        [&>input]:block [&>input]:bg-input
+        [&>input]:w-full [&>input]:h-16
+        [&>input]:rounded-(--radius) [&>input]:px-2 
+        [&>input]:text-xl [&>input]:mb-6">
+        <label for="nom" required>Nom</label>
+        <input type="text" required id="nom" placeholder="Nom">
+
+        <label for="prenom" required>Prenom</label>
+        <input type="text" required id="prenom" placeholder="Prenom">
+
+        <label for="email" required>Email</label>
+        <input type="email" required id="email" autocomplete="true" placeholder="Nom@example.com">
+
+        <label for="telephone" required>Telephone</label>
+        <input type="tel" required id="telephone" placeholder="XX XX XX XX XX">
+
+        <label for="motif" required>Motif</label>
+        <input type="text" required id="motif" placeholder="Motif">
+
+        <label for="date" required>Date souhaitée</label>
+        <input type="date" required id="date" >
+
+        <button 
+        id="submit-btn"
+        type="submit"
+        class="w-full bg-primary flex items-center font-medium text-2xl text-background justify-center
+        rounded-(--radius) py-4 gap-4 cursor-pointer hover:bg-accent-foreground transition-colors duration-200
+        
+        ">
+        <span>
+          Ajout d’une demande
+        </span>
+          <span class="h-6 w-4">
+            <svg>
+              <use href="./public/right-arrow-icon.svg"></use>
+            </svg>
+          </span>
+
+        </button>
+
+      </form>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
