@@ -166,6 +166,9 @@
 body::-webkit-scrollbar{
   display: none;
 }
+body{
+  overscroll-behavior: none;
+}
 
 
 label[required]{
